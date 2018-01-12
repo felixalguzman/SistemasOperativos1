@@ -1,10 +1,11 @@
 #!/bin/bash
 
 X=felix.txt
+#echo       muestra un mensaje en pantalla.
+
 #ls         listar informacion sobre archivos, carpetas.
 #logname    imprime el nombre del usuario loggeado.
 #compgen -c lista de comandos que el usuario puede correr actualmente.
-#echo       muestra un mensaje en pantalla.
 #date       muestra la fecha y hora actual.
 #groups     imprime los nombres del grupo que el usuario esta.
 #hostname   imprime el nombre del sistema.
