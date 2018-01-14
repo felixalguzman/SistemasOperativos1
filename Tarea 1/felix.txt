@@ -1121,6 +1121,7 @@ x-session-manager
 dbus-send
 rendercheck
 rcp
+code
 wish8.6
 apt-key
 ucf
@@ -2270,7 +2271,7 @@ google-play-music-desktop-player
 code
 mailspring
  
-jue ene 11 19:48:38 AST 2018
+vie ene 12 21:08:43 AST 2018
  
 felixal adm cdrom sudo dip plugdev lpadmin sambashare
  
@@ -2287,8 +2288,9 @@ LC_PAPER=es_DO.UTF-8
 LC_MONETARY=es_DO.UTF-8
 XDG_MENU_PREFIX=gnome-
 LANG=en_US.UTF-8
+MANAGERPID=976
 DISPLAY=:0
-OLDPWD=/home/felixal/Documents/Sistemas Operativos
+INVOCATION_ID=64fcf981b7374190a2e3186aaa2115b3
 GNOME_SHELL_SESSION_MODE=ubuntu
 COLORTERM=truecolor
 USERNAME=felixal
@@ -2301,22 +2303,23 @@ DESKTOP_SESSION=ubuntu
 QT4_IM_MODULE=xim
 TEXTDOMAINDIR=/usr/share/locale/
 WAYLAND_DISPLAY=wayland-0
-PWD=/home/felixal/Documents/Sistemas Operativos/Tarea 1
+PWD=/home/felixal/Documents/Sistemas Operativos/SistemasOperativos1/Tarea 1
 HOME=/home/felixal
-JOURNAL_STREAM=9:24755
+JOURNAL_STREAM=9:22498
 TEXTDOMAIN=im-config
 XDG_SESSION_TYPE=wayland
 XDG_DATA_DIRS=/usr/share/ubuntu:/usr/local/share:/usr/share:/var/lib/snapd/desktop
 XDG_SESSION_DESKTOP=ubuntu
 LC_ADDRESS=es_DO.UTF-8
-GJS_DEBUG_OUTPUT=stderr
+DBUS_STARTER_ADDRESS=unix:path=/run/user/1000/bus,guid=f4348796f8bc94f0734dfc175a595611
 LC_NUMERIC=es_DO.UTF-8
-VTE_VERSION=4804
 SHELL=/bin/bash
 TERM=xterm-256color
+VTE_VERSION=4804
 QT_IM_MODULE=ibus
 XMODIFIERS=@im=ibus
 IM_CONFIG_PHASE=2
+DBUS_STARTER_BUS_TYPE=session
 XDG_CURRENT_DESKTOP=ubuntu:GNOME
 SHLVL=3
 XDG_SEAT=seat0
@@ -2324,16 +2327,16 @@ LC_TELEPHONE=es_DO.UTF-8
 GDMSESSION=ubuntu
 GNOME_DESKTOP_SESSION_ID=this-is-deprecated
 LOGNAME=felixal
-DBUS_SESSION_BUS_ADDRESS=unix:path=/run/user/1000/bus
+DBUS_SESSION_BUS_ADDRESS=unix:path=/run/user/1000/bus,guid=f4348796f8bc94f0734dfc175a595611
 XDG_RUNTIME_DIR=/run/user/1000
 XDG_CONFIG_DIRS=/etc/xdg/xdg-ubuntu:/etc/xdg
 PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin
 LC_IDENTIFICATION=es_DO.UTF-8
-GJS_DEBUG_TOPICS=JS ERROR;JS LOG
-SESSION_MANAGER=local/felixal-Inspiron-3537:@/tmp/.ICE-unix/992,unix/felixal-Inspiron-3537:/tmp/.ICE-unix/992
+SYSTEMD_NSS_BYPASS_BUS=1
+SESSION_MANAGER=local/felixal-Inspiron-3537:@/tmp/.ICE-unix/1020,unix/felixal-Inspiron-3537:/tmp/.ICE-unix/1020
 LESSOPEN=| /usr/bin/lesspipe %s
 GTK_IM_MODULE=ibus
 LC_TIME=es_DO.UTF-8
 _=/usr/bin/printenv
  
-/home/felixal/Documents/Sistemas Operativos/Tarea 1
+/home/felixal/Documents/Sistemas Operativos/SistemasOperativos1/Tarea 1
