@@ -59,6 +59,6 @@ do
         "Quit")
             break
             ;;
-        *) echo invalid Punto;;
+        *) echo opcion no valida;;
     esac
 done
