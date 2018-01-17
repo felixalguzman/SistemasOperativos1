@@ -6,3 +6,6 @@ echo "" > $archivo
 chmod u+rw $archivo
 chmod g+r $archivo
 chmod o-r $archivo
+cd ..
+cd ..
+
