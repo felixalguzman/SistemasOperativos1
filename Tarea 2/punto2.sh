@@ -1,5 +1,18 @@
 #!/bin/bash
 p2=felixp2.txt
+data="12
+12
+13
+15
+123
+81
+8
+81
+6
+9
+23
+2
+23"
 echo "Punto 2" >> $p2
 mkdir "Mail"
 cd Mail
@@ -21,6 +34,7 @@ cd Sent
 mkdir "2006"
 cd 2006
 echo "" > telefonosClase.eml
+echo "$data" >> telefonosClase.eml
 cd ..
 cd ..
 cd Local

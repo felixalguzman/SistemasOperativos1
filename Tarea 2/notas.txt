@@ -1,9 +1,11 @@
+Nombre    DNI Calificacion 
 Cullen	16070   10 
+Vezaprnon	16961	6 
 Keith	16530	7 
 Abdul	16130	3 
-Vance	16880	6 
+Vanzapce	16880	6 
 Lawrence 16080	6 
 Tyler	16680	10 
 Gregory	16850	4 
-Lars	16650	2 
+Larzaps	16650	2 
 Chase	16361	7 
