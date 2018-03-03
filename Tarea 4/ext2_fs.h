@@ -7,96 +7,96 @@
 	 * Universite Pierre et Marie Curie (Paris VI)
 	 *
 	 *  from
-	 *
-	 *  linux/include/linux/minix_fs.h
-	 *
-	 *  Copyright (C) 1991, 1992  Linus Torvalds
-	 */
-	
-	#ifndef _LINUX_EXT2_FS_H
-	#define _LINUX_EXT2_FS_H
-	
-	#include <linux/types.h>
-	
-	/*
-	 * The second extended filesystem constants/structures
-	 */
-	
-	/*
-	 * Define EXT2FS_DEBUG to produce debug messages
-	 */
-	#undef EXT2FS_DEBUG
-	
-	/*
-	 * Define EXT2_PREALLOCATE to preallocate data blocks for expanding files
-	 */
-	#define EXT2_PREALLOCATE
-	#define EXT2_DEFAULT_PREALLOC_BLOCKS	8
-	
-	/*
-	 * The second extended file system version
-	 */
-	#define EXT2FS_DATE		"95/08/09"
-	#define EXT2FS_VERSION		"0.5b"
-	
-	/*
-	 * Debug code
-	 */
-	#ifdef EXT2FS_DEBUG
-	#	define ext2_debug(f, a...)	{ \
-						printk ("EXT2-fs DEBUG (%s, %d): %s:", \
-							__FILE__, __LINE__, __FUNCTION__); \
-					  	printk (f, ## a); \
-						}
-	#else
-	#	define ext2_debug(f, a...)	/**/
-	#endif
-	
-	/*
-	 * Special inode numbers
-	 */
-	#define	EXT2_BAD_INO		 1	/* Bad blocks inode */
-	#define EXT2_ROOT_INO		 2	/* Root inode */
-	#define EXT2_ACL_IDX_INO	 3	/* ACL inode */
-	#define EXT2_ACL_DATA_INO	 4	/* ACL inode */
-	#define EXT2_BOOT_LOADER_INO	 5	/* Boot loader inode */
-	#define EXT2_UNDEL_DIR_INO	 6	/* Undelete directory inode */
-	
-	/* First non-reserved inode for old ext2 filesystems */
-	#define EXT2_GOOD_OLD_FIRST_INO	11
-	
-	/*
-	 * The second extended file system magic number
-	 */
-	#define EXT2_SUPER_MAGIC	0xEF53
-	
-	/*
-	 * Maximal count of links to a file
-	 */
-	#define EXT2_LINK_MAX		32000
-	
-	/*
-	 * Macro-instructions used to manage several block sizes
-	 */
-	#define EXT2_MIN_BLOCK_SIZE		1024
-	#define	EXT2_MAX_BLOCK_SIZE		4096
-	#define EXT2_MIN_BLOCK_LOG_SIZE		  10
-	#ifdef __KERNEL__
-	# define EXT2_BLOCK_SIZE(s)		((s)->s_blocksize)
-	#else
-	# define EXT2_BLOCK_SIZE(s)		(EXT2_MIN_BLOCK_SIZE << (s)->s_log_block_size)
-	#endif
-	#define EXT2_ACLE_PER_BLOCK(s)		(EXT2_BLOCK_SIZE(s) / sizeof (struct ext2_acl_entry))
-	#define	EXT2_ADDR_PER_BLOCK(s)		(EXT2_BLOCK_SIZE(s) / sizeof (__u32))
-	#ifdef __KERNEL__
-	# define EXT2_BLOCK_SIZE_BITS(s)	((s)->s_blocksize_bits)
-	#else
-	# define EXT2_BLOCK_SIZE_BITS(s)	((s)->s_log_block_size + 10)
-	#endif
-	#ifdef __KERNEL__
-	#define	EXT2_ADDR_PER_BLOCK_BITS(s)	((s)->u.ext2_sb.s_addr_per_block_bits)
-	#define EXT2_INODE_SIZE(s)		((s)->u.ext2_sb.s_inode_size)
-	#define EXT2_FIRST_INO(s)		((s)->u.ext2_sb.s_first_ino)
+    	 *
+    	 *  linux/include/linux/minix_fs.h
+    	 *
+    	 *  Copyright (C) 1991, 1992  Linus Torvalds
+    	 */
+    	
+    	#ifndef _LINUX_EXT2_FS_H
+    	#define _LINUX_EXT2_FS_H
+    	
+    	#include <linux/types.h>
+    	
+    	/*
+    	 * The second extended filesystem constants/structures
+    	 */
+    	
+    	/*
+    	 * Define EXT2FS_DEBUG to produce debug messages
+    	 */
+    	#undef EXT2FS_DEBUG
+    	
+    	/*
+    	 * Define EXT2_PREALLOCATE to preallocate data blocks for expanding files
+    	 */
+    	#define EXT2_PREALLOCATE
+    	#define EXT2_DEFAULT_PREALLOC_BLOCKS	8
+    	
+    	/*
+    	 * The second extended file system version
+    	 */
+    	#define EXT2FS_DATE		"95/08/09"
+    	#define EXT2FS_VERSION		"0.5b"
+    	
+    	/*
+    	 * Debug code
+    	 */
+    	#ifdef EXT2FS_DEBUG
+    	#	define ext2_debug(f, a...)	{ \
+    						printk ("EXT2-fs DEBUG (%s, %d): %s:", \
+    							__FILE__, __LINE__, __FUNCTION__); \
+    					  	printk (f, ## a); \
+    						}
+    	#else
+    	#	define ext2_debug(f, a...)	/**/
+    	#endif
+    	
+    	/*
+    	 * Special inode numbers
+    	 */
+    	#define	EXT2_BAD_INO		 1	/* Bad blocks inode */
+    	#define EXT2_ROOT_INO		 2	/* Root inode */
+    	#define EXT2_ACL_IDX_INO	 3	/* ACL inode */
+    	#define EXT2_ACL_DATA_INO	 4	/* ACL inode */
+    	#define EXT2_BOOT_LOADER_INO	 5	/* Boot loader inode */
+    	#define EXT2_UNDEL_DIR_INO	 6	/* Undelete directory inode */
+    	
+    	/* First non-reserved inode for old ext2 filesystems */
+    	#define EXT2_GOOD_OLD_FIRST_INO	11
+    	
+    	/*
+    	 * The second extended file system magic number
+    	 */
+    	#define EXT2_SUPER_MAGIC	0xEF53
+    	
+    	/*
+    	 * Maximal count of links to a file
+    	 */
+    	#define EXT2_LINK_MAX		32000
+    	
+    	/*
+    	 * Macro-instructions used to manage several block sizes
+    	 */
+    	#define EXT2_MIN_BLOCK_SIZE		1024
+    	#define	EXT2_MAX_BLOCK_SIZE		4096
+    	#define EXT2_MIN_BLOCK_LOG_SIZE		  10
+    	#ifdef __KERNEL__
+    	# define EXT2_BLOCK_SIZE(s)		((s)->s_blocksize)
+    	#else
+    	# define EXT2_BLOCK_SIZE(s)		(EXT2_MIN_BLOCK_SIZE << (s)->s_log_block_size)
+    	#endif
+    	#define EXT2_ACLE_PER_BLOCK(s)		(EXT2_BLOCK_SIZE(s) / sizeof (struct ext2_acl_entry))
+    	#define	EXT2_ADDR_PER_BLOCK(s)		(EXT2_BLOCK_SIZE(s) / sizeof (__u32))
+    	#ifdef __KERNEL__
+    	# define EXT2_BLOCK_SIZE_BITS(s)	((s)->s_blocksize_bits)
+    	#else
+    	# define EXT2_BLOCK_SIZE_BITS(s)	((s)->s_log_block_size + 10)
+    	#endif
+    	#ifdef __KERNEL__
+    	#define	EXT2_ADDR_PER_BLOCK_BITS(s)	((s)->u.ext2_sb.s_addr_per_block_bits)
+    	#define EXT2_INODE_SIZE(s)		((s)->u.ext2_sb.s_inode_size)
+    	#define EXT2_FIRST_INO(s)		((s)->u.ext2_sb.s_first_ino)
    	#else
    	#define EXT2_INODE_SIZE(s)	(((s)->s_rev_level == EXT2_GOOD_OLD_REV) ? \
    					 EXT2_GOOD_OLD_INODE_SIZE : \

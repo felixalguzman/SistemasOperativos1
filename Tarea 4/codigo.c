@@ -7,7 +7,7 @@
 #include </home/felixal/Documents/Sistemas Operativos/SistemasOperativos1/Tarea 4/ext2_fs.h>
 
 #define BASE_OFFSET 1024
-#define USB_DEVICE "/dev/sdc1"
+#define USB_DEVICE "/dev/sdb1"
 #define BLOCK_OFFSET(block) (BASE_OFFSET + (block - 1) * block_size)
 #define FILTER_BIT(byte, i) ((byte >> i) & 0x01)
 
