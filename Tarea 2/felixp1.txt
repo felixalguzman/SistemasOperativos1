@@ -23,3 +23,28 @@ uname
 uncompress
 unicode_start
 Punto 1 parte 3
+Punto 1
+chacl
+loadkeys
+rbash
+readlink
+rnano
+static-sh
+uname
+zcat
+Punto 1 parte 2
+echo
+ed
+efibootdump
+efibootmgr
+egrep
+ip
+open
+openvt
+udevadm
+ulockmgr_server
+umount
+uname
+uncompress
+unicode_start
+Punto 1 parte 3
